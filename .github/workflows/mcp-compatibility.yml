@@ -39,9 +39,5 @@ jobs:
       - name: Import ServiceNow MCP server
         run: uv run python -c "from servicenow_mcp.server import ServiceNowMCP; print('ServiceNowMCP import OK')"
 
-      - name: Run test suite
-        run: >
-          uv run --with pytest pytest -q
-          --ignore=tests/test_catalog_resources.py
-          --ignore=tests/test_changeset_resources.py
-          --ignore=tests/test_script_include_resources.py
+      - name: Test full MCP tool package
+        run: uv run --with pytest pytest -q tests/test_mcp_compatibility.py

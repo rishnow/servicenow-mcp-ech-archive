@@ -37,6 +37,6 @@ def test_full_package_tool_registration():
 
     print("\nMissing MCP tools:")
     for name in missing:
-    print(f"  - {name}")
+        print(f"  - {name}")
 
     assert not missing, f"{len(missing)} configured tools were not exposed: {missing}"

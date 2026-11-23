@@ -28,7 +28,7 @@ jobs:
           python-version: "3.11"
 
       - name: Resolve dependencies
-        run: uv lock
+        run: uv lock -v
 
       - name: Install dependencies
         run: uv sync --locked
